@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block main %}
+{% set F = p.f %}
+<section class="gen" data-gen>
+<form class="campos" onsubmit="return false" aria-label="Completa tus datos">
+<h2>1. Completa tus datos</h2>
+{% for id, lab, ej in F.campos %}<label>{{ lab }}<input name="{{ id }}" placeholder="{{ ej }}" autocomplete="off"></label>
+{% endfor %}<p class="mut">Lo que escribes no sale de tu navegador.</p>
+</form>
+<div class="doc-w"><h2>2. Tu documento</h2>
+<div class="acciones"><button type="button" data-copiar>Copiar texto</button><button type="button" data-word>Descargar Word</button><button type="button" data-pdf>Imprimir o PDF</button></div>
+<pre class="doc" data-doc aria-live="polite"></pre>
+<script type="text/plain" data-plantilla>{{ F.plantilla }}</script>
+<script type="application/json" data-ejemplos>{{ F.campos|tojson }}</script>
+</div>
+</section>
+<section><h2>Cómo usar este formato</h2><ol>{% for x in F.pasos %}<li>{{ x }}</li>{% endfor %}</ol></section>
+<section><h2>Otros formatos</h2><ul class="paises">{% for x in FORMATOS if x.slug != F.slug %}<li><a href="/{{ x.slug }}/">{{ x.nombre }}</a></li>{% endfor %}</ul></section>
+{% endblock %}
