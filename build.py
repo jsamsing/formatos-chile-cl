@@ -98,6 +98,7 @@ def main():
             + "Last updated: " + C.REVISADO + nl + nl + "## Datos clave" + nl + "- Renuncia voluntaria: por escrito, con al menos 30 dias de aviso (art. 159 N 2 Codigo del Trabajo); se ratifica ante ministro de fe o en el portal Mi DT." + nl + "- Los datos que escribe el usuario no se envian a ningun servidor." + nl + nl + "## Formatos" + nl + pags + nl + "## Optional" + nl + "- [Sitemap](" + C.DOMINIO + "/sitemap.xml)" + nl)
     (DIST / "llms.txt").write_text(txt_ascii(llms))
     (DIST / f"{C.INDEXNOW_KEY}.txt").write_text(C.INDEXNOW_KEY)
+    (DIST / "google85a3224fc136a170.html").write_text("google-site-verification: google85a3224fc136a170.html")  # Search Console
     (DIST / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0e2440"/><circle cx="16" cy="16" r="10" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M16 10v6l4.5 3" fill="none" stroke="#f5b400" stroke-width="2.5" stroke-linecap="round"/></svg>')
     (DIST / ".htaccess").write_text("""RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
