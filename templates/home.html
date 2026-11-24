@@ -1,5 +1,5 @@
 {% extends "base.html" %}
 {% block main %}
-<section class="lista" aria-label="Formatos disponibles">{% for x in FORMATOS %}<a class="fcard" href="/{{ x.slug }}/"><b>{{ x.nombre }}</b><span>{{ x.desc }}</span><em>Completar ›</em></a>{% endfor %}<a class="fcard" href="/tamano-carta/"><b>Tamaño carta</b><span>Medidas de la hoja carta, oficio y A4 en cm, mm, pulgadas y píxeles.</span><em>Ver medidas ›</em></a></section>
+<section class="lista" aria-label="Formatos disponibles">{% for x in FORMATOS %}<a class="fcard" href="/{{ x.slug }}/"><b>{{ x.nombre }}</b><span>{{ x.desc }}</span><em>Completar ›</em></a>{% endfor %}<a class="fcard" href="/carta-gantt/"><b>Carta Gantt</b><span>Plantilla de carta Gantt: escribe tus tareas y descárgala en Excel o PDF.</span><em>Armar ›</em></a><a class="fcard" href="/tamano-carta/"><b>Tamaño carta</b><span>Medidas de la hoja carta, oficio y A4 en cm, mm, pulgadas y píxeles.</span><em>Ver medidas ›</em></a></section>
 {% include "_avisos.html" %}
 {% endblock %}

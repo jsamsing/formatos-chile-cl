@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="gantt" data-gantt>
+<h2>1. Arma tu carta Gantt</h2>
+<div class="g-top"><label>Nombre del proyecto<input data-g-proy value="Remodelación del local" autocomplete="off"></label>
+<label>Fecha de inicio<input type="date" data-g-ini></label>
+<label>Unidad<select data-g-uni><option value="7">Semanas</option><option value="1">Días</option></select></label></div>
+<div class="g-tareas" data-g-tareas></div>
+<p><button type="button" class="sec" data-g-add>+ Agregar tarea</button> <span class="mut">Lo que escribes no sale de tu navegador.</span></p>
+<h2>2. Tu carta Gantt</h2>
+<div class="acciones"><button type="button" data-g-xls>Descargar Excel</button><button type="button" data-g-pdf>Imprimir o PDF</button></div>
+<div class="g-chart" data-g-chart aria-live="polite"></div>
+</section>
+<section><h2>Cómo hacer una carta Gantt paso a paso</h2><ol>
+<li>Divide el proyecto en tareas concretas, con un responsable cada una.</li>
+<li>Estima cuánto dura cada tarea, en días o semanas.</li>
+<li>Ordena las tareas: marca en qué semana parte cada una y cuáles dependen de otra.</li>
+<li>Dibuja una barra por tarea desde su inicio hasta su fin; las barras que se cruzan son tareas en paralelo.</li>
+<li>Actualiza la carta cada semana con el avance real y ajusta las fechas que se atrasen.</li></ol></section>
+<section><h2>Ejemplo de carta Gantt</h2>
+<p>El ejemplo de arriba es la remodelación de un local en 8 semanas: diseño y presupuesto, permisos, obra gruesa, instalaciones, terminaciones y apertura. Cambia los nombres, el inicio y la duración de cada tarea y la carta se redibuja sola. Al descargarla en Excel, cada semana queda en una columna y las celdas pintadas marcan la duración, así puedes seguir editándola.</p></section>
+<section><h2>Otros formatos</h2><ul class="paises">{% for x in FORMATOS %}<li><a href="/{{ x.slug }}/">{{ x.nombre }}</a></li>{% endfor %}<li><a href="/tamano-carta/">Tamaño carta</a></li></ul></section>
+{% endblock %}
