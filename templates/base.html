@@ -34,7 +34,7 @@
 </main>
 <footer class="ft"><div class="wrap">
 <p><a href="/"><b>Formatos Chile</b></a> · Cartas y documentos listos para completar, gratis y sin registro.</p>
-<p>{% for x in FORMATOS %}<a href="/{{ x.slug }}/">{{ x.nombre }}</a> · {% endfor %}<a href="/privacidad/">Privacidad</a> · <button type="button" class="lnk" onclick="ckShow()">Preferencias de cookies</button></p>
+<p>{% for x in FORMATOS %}<a href="/{{ x.slug }}/">{{ x.nombre }}</a> · {% endfor %}<a href="/tamano-carta/">Tamaño carta</a> · <a href="/privacidad/">Privacidad</a> · <button type="button" class="lnk" onclick="ckShow()">Preferencias de cookies</button></p>
 <p class="mut">Formatos de referencia según el Código del Trabajo y la Dirección del Trabajo; no reemplazan asesoría legal. Revisado el {{ REVISADO_TXT }}. Sitio independiente; no es un organismo del Estado.</p>
 </div></footer>
 <div id="ck" class="ck" hidden><p>Usamos cookies de medición (Google Analytics) solo si aceptas.</p><button type="button" onclick="ckSet(1)">Aceptar</button><button type="button" class="sec" onclick="ckSet(0)">Rechazar</button></div>
