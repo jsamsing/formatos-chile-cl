@@ -3,7 +3,7 @@ var GA='__GA4__';
 function ev(n,o){if(window.gtag)gtag('event',n,o||{})}
 var g=document.querySelector('[data-gen]');
 if(g){var tpl=g.querySelector('[data-plantilla]').textContent.trim(),ej={};JSON.parse(g.querySelector('[data-ejemplos]').textContent).forEach(function(c){ej[c[0]]=c[2]});
-var doc=g.querySelector('[data-doc]'),ins=g.querySelectorAll('input'),usado=false;
+var doc=g.querySelector('[data-doc]'),ins=g.querySelectorAll('input,textarea'),usado=false;
 function texto(){var v={};ins.forEach(function(i){v[i.name]=i.value.trim()||ej[i.name]});return tpl.replace(/\{(\w+)\}/g,function(m,k){return v[k]!=null?v[k]:m})}
 function pinta(){doc.textContent=texto()}
 ins.forEach(function(i){i.addEventListener('input',function(){pinta();if(!usado){usado=true;ev('formato_start',{formato:location.pathname})}})});pinta();

@@ -98,6 +98,43 @@ FORMATOS = [
                "Antes de ir, confirma en la institución si aceptan poder simple o exigen poder ante notario."],
      "faqs": [("¿El poder simple necesita notario?", "No: se firma sin notario. Pero algunos trámites, como vender un vehículo o una propiedad, exigen poder notarial o escritura pública."),
               ("¿Cuánto dura un poder simple?", "Sirve para el trámite indicado; si la institución pide uno reciente, haz uno nuevo con la fecha del día.")]},
+    {"slug": "cv-formato-harvard", "nombre": "CV formato Harvard",
+     "title": "CV formato Harvard: plantilla gratis para completar Chile",
+     "desc": "Plantilla de CV formato Harvard para Chile: completa tus datos y descárgalo en Word o PDF. Orden cronológico inverso, una página y sin foto.",
+     "corta": "El CV formato Harvard es un currículum de una página, sin foto ni diseño, ordenado en secciones fijas: datos de contacto, perfil, experiencia laboral y educación de lo más reciente a lo más antiguo, y al final habilidades e idiomas. Se usa porque es fácil de leer para un reclutador y para los sistemas que filtran postulaciones.",
+     "campos": [("nombre", "Nombre completo", "María José Pérez Soto"),
+                ("contacto", "Ciudad, teléfono y correo", "Santiago · +56 9 1234 5678 · mariajose.perez@correo.cl"),
+                ("linkedin", "LinkedIn o portafolio (opcional)", "linkedin.com/in/mariajoseperez"),
+                ("perfil", "Perfil profesional (2 o 3 líneas)", "Administradora con 5 años de experiencia en gestión de compras y control de inventario en empresas de retail. Busco aportar orden y ahorro en un área de abastecimiento.", "multi"),
+                ("experiencia", "Experiencia laboral (de la más reciente a la más antigua)", "Comercial Los Andes SpA, Santiago — Jefa de compras (marzo 2023 – actualidad)\n• Negocié con 40 proveedores y bajé el costo de compra en un 8 %.\n• Implementé un control de stock semanal que redujo los quiebres de inventario.\n\nDistribuidora Sur Ltda., Rancagua — Asistente de compras (enero 2020 – febrero 2023)\n• Gestioné órdenes de compra y facturas de 25 proveedores.", "multi"),
+                ("educacion", "Educación (de la más reciente a la más antigua)", "Universidad de Santiago de Chile — Ingeniería en Administración (2015 – 2019)\nLiceo Bicentenario de Rancagua — Enseñanza media (2011 – 2014)", "multi"),
+                ("habilidades", "Habilidades y herramientas", "Excel avanzado, SAP, negociación con proveedores, licencia de conducir clase B", "multi"),
+                ("idiomas", "Idiomas", "Español nativo, inglés intermedio")],
+     "plantilla": """{nombre}
+{contacto}
+{linkedin}
+
+PERFIL
+{perfil}
+
+EXPERIENCIA LABORAL
+{experiencia}
+
+EDUCACIÓN
+{educacion}
+
+HABILIDADES
+{habilidades}
+
+IDIOMAS
+{idiomas}""",
+     "pasos": ["Escribe tu experiencia y tu educación desde lo más reciente hacia lo más antiguo.",
+               "En cada trabajo pon empresa, ciudad, cargo y fechas, y luego 2 o 3 logros con cifras cuando las tengas.",
+               "Ajusta el perfil y las habilidades a cada aviso: usa las mismas palabras que pide la oferta.",
+               "Descárgalo en Word para darle formato o guárdalo en PDF con «Imprimir»: el PDF es lo que se envía."],
+     "faqs": [("¿El CV formato Harvard lleva foto?", "No. El formato Harvard no lleva foto ni datos como edad o estado civil; en Chile muchas empresas igual aceptan CV con foto, así que agrégala solo si el aviso la pide."),
+              ("¿Cuántas páginas debe tener?", "Una página si tienes menos de 10 años de experiencia; dos como máximo si tienes más. Deja solo lo que sirve para el cargo al que postulas."),
+              ("¿Qué pongo si no tengo experiencia?", "Pon primero la educación y suma prácticas, trabajos de verano, voluntariados o proyectos de estudio, con lo que hiciste y lo que lograste.")]},
 ]
 
 PAGINAS = [
