@@ -75,3 +75,4 @@ h2{font-size:1.3rem;color:var(--ink);margin:34px 0 10px}
 .g-chart{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px}.g-p{font-weight:700;margin:0 0 8px}.gt th,.gt td{white-space:nowrap;font-size:.82rem}.gt td{min-width:44px}.gt td.on{background:#1f6feb}
 @media(max-width:700px){.g-top{grid-template-columns:1fr}.g-h{display:none}.g-f{grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);padding-bottom:8px}.g-f input:first-child{grid-column:1/-1}}
 @media print{.gantt>h2,.g-top,.g-tareas,.gantt>p,.acciones{display:none}.gt td.on{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+.gantt p>button.sec,.g-f button{min-height:44px;padding:8px 16px;border-radius:8px;border:1px solid #b9c6d4;background:#fff;font:inherit;font-weight:600;color:var(--ink);cursor:pointer}.g-f button{padding:0}
