@@ -4,7 +4,7 @@
 DOMINIO = "https://formatos-chile.cl"
 MARCA = "Formatos Chile"
 REVISADO = "2026-11-23"
-GA4 = ""
+GA4 = "G-9BR5XRGH80"
 INDEXNOW_KEY = "8b2d4f6a1c3e5a7b9d0f2e4c6a8b1d3f"
 
 RED = [
