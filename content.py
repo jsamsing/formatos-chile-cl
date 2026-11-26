@@ -168,3 +168,9 @@ PAGINAS = [
      "desc": "Cómo trata Formatos Chile tus datos según la Ley 21.719: sin registro, medición de visitas solo con tu consentimiento y cómo ejercer tus derechos.",
      "h1": "Privacidad y datos personales"},
 ]
+
+
+# 404 amigable (Johans 2026-11-26): layout completo, buscador, enlaces más usados, noindex; build.py lo deja en /404.html (ErrorDocument)
+PAGINAS.append({"path": "/404/", "tpl": "404.html", "noindex": True, "title": "Página no encontrada | " + MARCA,
+    "desc": "La página que buscas no existe o cambió de dirección. Revisa los formatos de cartas y documentos para Chile que se completan en línea.",
+    "h1": "Esta hoja quedó en blanco", "buscar": [[x["h1"], x["path"]] for x in PAGINAS if not x.get("noindex")]})
