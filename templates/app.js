@@ -30,9 +30,10 @@ G.querySelector('[data-g-add]').onclick=function(){lee();var f=T.length?T[T.leng
 G.querySelector('[data-g-xls]').onclick=function(){lee();var b=new Blob(['<html><head><meta charset="utf-8"></head><body><h3>'+esc(proy.value)+'</h3>'+tabla(true)+'</body></html>'],{type:'application/vnd.ms-excel'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='carta-gantt.xls';a.click();ev('formato_excel',{formato:location.pathname})};
 G.querySelector('[data-g-pdf]').onclick=function(){ev('formato_pdf',{formato:location.pathname});window.print()};}
 window.ckShow=function(){document.getElementById('ck').hidden=false};
-window.ckSet=function(v){try{localStorage.setItem('fo_ck',v?'g':'d')}catch(e){}document.getElementById('ck').hidden=true;if(v)ga()};
+window.ckSet=function(v){try{localStorage.setItem('fo_ck',v?'g':'d')}catch(e){}document.getElementById('ck').hidden=true;if(v)ga();else if(window.gtag)gtag('consent','update',{analytics_storage:'denied'})};
 function ga(){if(!GA||location.hostname!=='formatos-chile.cl'||window.gtag)return;var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA)}
 var k=null;try{k=localStorage.getItem('fo_ck')}catch(e){}
 if(k==='g')ga();else if(!k&&GA)setTimeout(ckShow,1500);
-document.addEventListener('click',function(e){var a=e.target.closest('[data-ev]');if(a&&window.gtag)gtag('event',a.dataset.ev,{cta_label:a.dataset.label})});
+// Clics: todo enlace o botón manda cta_click con etiqueta y zona; los avisos siguen con aviso_click y los eventos propios (red_click, formato_*) se mantienen
+document.addEventListener('click',function(e){var a=e.target.closest('a,button');if(!a||!window.gtag||a.closest('#ck'))return;var z=a.closest('.avisos')?'aviso':a.closest('.migas')?'migas':a.closest('header')?'menú':a.closest('footer')?'footer':'cuerpo',l=(a.dataset.label||a.getAttribute('aria-label')||a.textContent||'').replace(/\s+/g,' ').trim().slice(0,80),n=a.dataset.ev||'cta_click';gtag('event',n,{cta_label:l,cta_zone:z});if(n!=='cta_click'&&n!=='aviso_click')gtag('event','cta_click',{cta_label:l,cta_zone:z})});
 })();

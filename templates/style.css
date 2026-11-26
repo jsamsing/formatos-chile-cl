@@ -76,3 +76,18 @@ h2{font-size:1.3rem;color:var(--ink);margin:34px 0 10px}
 @media(max-width:700px){.g-top{grid-template-columns:1fr}.g-h{display:none}.g-f{grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line);padding-bottom:8px}.g-f input:first-child{grid-column:1/-1}}
 @media print{.gantt>h2,.g-top,.g-tareas,.gantt>p,.acciones{display:none}.gt td.on{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 .gantt p>button.sec,.g-f button{min-height:44px;padding:8px 16px;border-radius:8px;border:1px solid #b9c6d4;background:#fff;font:inherit;font-weight:600;color:var(--ink);cursor:pointer}.g-f button{padding:0}
+/* Logos de tecnologías en el footer (protocolo de logos, 2026-11-26) */
+.ftech{list-style:none;padding:0;margin:16px 0 4px;display:flex;flex-wrap:wrap;gap:8px}
+.ftech a{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:.9rem}
+.ftech svg{flex:none}.ft .ftech-n{margin:4px 0 0;font-size:.85rem}
+/* Móvil: texto de 14 px o más y objetivos táctiles de 48 px (2026-11-26) */
+@media(max-width:700px){
+.migas,.ut,.fd,.mut,.av-red,.av-tx small,.tb thead th,.ft,.ft .ftech-n,.ftech a{font-size:14px}
+.migas a,.ft p a,.ft .lnk{display:inline-flex;align-items:center;min-height:48px}
+.menu-t{height:48px}.logo{min-height:48px}small{font-size:14px}
+.ck button{min-height:48px}
+.faq summary{min-height:48px;padding:10px 0}
+.red a{min-height:48px}
+.paises a,.largos a{display:inline-flex;align-items:center;min-height:48px}
+}
+@media(max-width:700px){.gt th,.gt td,.gt small,.g-f,.campos label{font-size:14px}.acciones button,.g-f button,.gantt p>button.sec,.campos input,.campos textarea,.g-top input,.g-top select,.g-f input{min-height:48px}.fcard em{min-height:48px;display:flex;align-items:center}}

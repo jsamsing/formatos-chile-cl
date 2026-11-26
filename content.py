@@ -164,7 +164,7 @@ PAGINAS = [
               ("¿Cómo se hace una carta Gantt en Excel?", "Pon las tareas en la primera columna y las semanas en la primera fila, y pinta las celdas de cada tarea entre su semana de inicio y su semana de término. Con esta plantilla el archivo de Excel sale listo para seguir editándolo."),
               ("¿Conviene usar días o semanas?", "Semanas para proyectos de más de un mes; días para proyectos cortos o eventos.")]},
     {"path": "/privacidad/", "tpl": "legal.html", "noindex": True,
-     "title": "Privacidad y cookies de Formatos Chile",
-     "desc": "Cómo trata Formatos Chile los datos de quienes visitan el sitio: los documentos se arman en tu navegador y la medición de visitas es con consentimiento.",
-     "h1": "Privacidad y cookies"},
+     "title": "Privacidad y datos personales de Formatos Chile",
+     "desc": "Cómo trata Formatos Chile tus datos según la Ley 21.719: sin registro, medición de visitas solo con tu consentimiento y cómo ejercer tus derechos.",
+     "h1": "Privacidad y datos personales"},
 ]
